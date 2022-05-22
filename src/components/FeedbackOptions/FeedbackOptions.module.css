@@ -1,6 +1,3 @@
-.button:not(:last-child) {
-  margin-right: 10px;
-}
 .button {
   text-transform: capitalize;
   display: inline-block;
@@ -24,6 +21,9 @@
   touch-action: manipulation;
   vertical-align: top;
   transition: box-shadow 0.2s;
+}
+.button:not(:last-child) {
+  margin-right: 10px;
 }
 .button:focus-visible {
   border: 1px solid #4c51f9;
