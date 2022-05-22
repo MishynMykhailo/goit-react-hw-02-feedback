@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-import Section from './Section/Section';
-import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions';
+import Section from './Section';
+import Statistics from './Statistics';
 
 export class App extends Component {
   state = {
@@ -9,23 +9,6 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  // goodFeedBackCount = evt => {
-  //   this.setState(prevState => ({
-  //     good: prevState.good + 1,
-  //   }));
-  // };
-
-  // neutralFeedBackCount() {
-  //   this.setState(prevState => ({
-  //     neutral: prevState.neutral + 1,
-  //   }));
-  // }
-
-  // badFeedBackCount() {
-  //   this.setState(prevState => ({
-  //     bad: prevState.bad + 1,
-  //   }));
-  // }
   onLeaveFeedback = items => {
     const label = items.target.textContent;
 
@@ -40,8 +23,7 @@ export class App extends Component {
     }, 0);
   }
   countPositiveFeedbackPercentage() {
-    let result =
-      Math.ceil((this.state.good / this.countTotalFeedback()) * 100) + '%';
+    let result = Math.ceil((this.state.good / this.countTotalFeedback()) * 100);
     return result;
   }
 
