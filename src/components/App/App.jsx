@@ -29,12 +29,13 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const items = Object.keys(this.state);
 
     return (
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={items}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>

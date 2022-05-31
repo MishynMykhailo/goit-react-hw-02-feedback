@@ -1,6 +1,6 @@
 import s from '../Statistics/Statistics.module.css';
-import Notification from 'components/Notification/Notification';
 import PropTypes from 'prop-types';
+import Notification from 'components/Notification/Notification';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <>
